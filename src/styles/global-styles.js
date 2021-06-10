@@ -89,7 +89,7 @@ export const ContentImagem = styled.div`
     justify-content: center;
     z-index: 999;
     position: relative;
-    width: 50%;
+    width: 410px;
   `}
 `;
 export const Imagem = styled.img`

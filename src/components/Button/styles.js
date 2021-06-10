@@ -4,12 +4,15 @@ const borderRadius = (around) => css`
 `;
 export const ButtonContainer = styled.div`
   ${({ theme, colorDark, around, opacity }) => css`
-    background: ${theme.colors.gray};
+    background: rgb(225, 225, 227);
     display: inline-block;
-    ${borderRadius(around)};
+    box-shadow: 4px 4px 13px rgb(0 0 0 / 50%);
+    border: 5px solid #e8e8e8;
+    border-radius: 20px;
     clear: both;
     margin-right: 30px;
     opacity: ${opacity};
+    background-image: linear-gradient(to right, #fefefe, #d6d6d6);
   `}
 `;
 
@@ -24,5 +27,6 @@ export const ButtonText = styled.a`
     justify-content: center;
     padding: ${cutomPadding};
     font-size: ${size};
+    text-align: center;
   `}
 `;

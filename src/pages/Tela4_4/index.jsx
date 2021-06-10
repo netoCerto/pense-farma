@@ -44,7 +44,7 @@ const Tela4_4 = () => {
           as={'h2'}
           marginTop={'-30px'}
           paddingBottom={'20px'}
-          width={'350px;'}
+          width={'410px'}
         >
           QUAL A TEMPERATURA AFERIDA?
         </Heading>
@@ -53,7 +53,7 @@ const Tela4_4 = () => {
           as={'h2'}
           marginTop={'-30px'}
           paddingBottom={'20px'}
-          width={'350px;'}
+          width={'410px'}
         >
           POR QUANTO TEMPO?
         </Heading>
