@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Button } from '../../components/Button';
 import { Heading } from '../../components/Heading';
 import { BoxBottom, Imagem, ContentImagem } from '../../styles/global-styles';
-import Seta from '../../assets/images/seta.png';
+import Seta from '../../assets/images/arrow-down.svg';
 import { Redirect } from '../../components/Redirect';
 
 const Tela4_1_1 = () => {

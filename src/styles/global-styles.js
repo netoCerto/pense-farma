@@ -90,10 +90,13 @@ export const ContentImagem = styled.div`
     z-index: 999;
     position: relative;
     width: 410px;
+    flex-direction: column;
   `}
 `;
 export const Imagem = styled.img`
-  ${() => css``}
+  ${() => css`
+    width: 60px;
+  `}
 `;
 
 export const Footer = styled.footer`

@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Button } from '../../components/Button';
 import { Heading } from '../../components/Heading';
 import { BoxBottom, Imagem, ContentImagem } from '../../styles/global-styles';
-import Seta from '../../assets/images/seta.png';
+import Seta from '../../assets/images/arrow-down.svg';
 import { Redirect } from '../../components/Redirect';
 
 const Tela4_2_1 = () => {
@@ -57,7 +57,7 @@ const Tela4_2_1 = () => {
       <Heading as={'h2'} marginTop={'20px'} paddingBottom={'20px'}>
         SE SIM:
       </Heading>
-      <BoxBottom>
+      {/* <BoxBottom>
         <Heading
           size={'medium'}
           as={'h2'}
@@ -76,12 +76,30 @@ const Tela4_2_1 = () => {
         >
           POR QUANTO TEMPO?
         </Heading>
-      </BoxBottom>
+      </BoxBottom> */}
       <BoxBottom>
         <ContentImagem>
+          <Heading
+            size={'medium'}
+            as={'h2'}
+            // marginTop={'-30px'}
+            paddingBottom={'20px'}
+            // width={'350px;'}
+          >
+            QUAL A TEMPERATURA AFERIDA?
+          </Heading>
           <Imagem src={Seta} />
         </ContentImagem>
         <ContentImagem>
+          <Heading
+            size={'medium'}
+            as={'h2'}
+            // marginTop={'-30px'}
+            paddingBottom={'20px'}
+            // width={'350px;'}
+          >
+            POR QUANTO TEMPO?
+          </Heading>
           <Imagem src={Seta} />
         </ContentImagem>
       </BoxBottom>
