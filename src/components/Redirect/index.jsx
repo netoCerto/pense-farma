@@ -21,7 +21,7 @@ export const Redirect = () => {
   return (
     <>
       <IdleTimer
-        timeout={3000}
+        timeout={60000}
         onIdle={handleOnIdle}
         onActive={handleOnActive}
         onAction={handleOnAction}
