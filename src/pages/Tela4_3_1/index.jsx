@@ -5,6 +5,7 @@ import { Heading } from '../../components/Heading';
 import { BoxBottom, Imagem, ContentImagem } from '../../styles/global-styles';
 import Seta from '../../assets/images/arrow-down.svg';
 import { Redirect } from '../../components/Redirect';
+import { GoBack } from '../../components/GoBack';
 
 const Tela4_3_1 = () => {
   const history = useHistory();
@@ -132,24 +133,25 @@ const Tela4_3_1 = () => {
 
   return (
     <div>
+      <GoBack />
       <Heading>EXPLIQUE UM POUCO MELHOR SOBRE ESTA DOR</Heading>
 
       <BoxBottom>
         <Heading
           size={'medium'}
           as={'h2'}
-          marginTop={'-30px'}
-          paddingBottom={'20px'}
-          width={'350px;'}
+          // marginTop={'-30px'}
+          // paddingBottom={'20px'}
+          width={'390px;'}
         >
           POR QUANTO TEMPO?
         </Heading>
         <Heading
           size={'medium'}
           as={'h2'}
-          marginTop={'-30px'}
-          paddingBottom={'20px'}
-          width={'350px;'}
+          // marginTop={'-30px'}
+          // paddingBottom={'20px'}
+          width={'390px;'}
         >
           JÁ TOMOU ALGUM MEDICAMENTO PARA DOR?
         </Heading>
@@ -170,6 +172,7 @@ const Tela4_3_1 = () => {
             e.preventDefault();
             setTempo('MENOS DE 3 DIAS');
           }}
+          customWidth={'370px'}
           opacity={tempo == 'MENOS DE 3 DIAS' ? '1' : '0.5'}
         />
 
@@ -178,11 +181,12 @@ const Tela4_3_1 = () => {
           onClick={(e) => {
             e.preventDefault();
             if (tempo == null) {
-              alert('Selecione uma tempo');
+              alert('Selecione o tempo');
             } else {
               nextPage('SIM');
             }
           }}
+          customWidth={'370px'}
           opacity={medicamento == 'SIM' ? '1' : '0.5'}
         />
       </BoxBottom>
@@ -194,6 +198,7 @@ const Tela4_3_1 = () => {
             e.preventDefault();
             setTempo('ACIMA DE 38 °C');
           }}
+          customWidth={'370px'}
           opacity={tempo == 'MAIS DE 3 DIAS' ? '1' : '0.5'}
         />
 
@@ -202,11 +207,12 @@ const Tela4_3_1 = () => {
           onClick={(e) => {
             e.preventDefault();
             if (medicamento == null) {
-              alert('Selecione uma temperatura aferida');
+              alert('Selecione o tempo');
             } else {
               nextPage('NÃO');
             }
           }}
+          customWidth={'370px'}
           opacity={medicamento == 'NÃO' ? '1' : '0.5'}
         />
       </BoxBottom>

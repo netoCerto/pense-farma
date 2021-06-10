@@ -47,7 +47,7 @@ const Tela4_1_2 = () => {
         onClick={(e) => {
           e.preventDefault();
           if (temperaturaAferida == null) {
-            alert('Selecione uma temperatura aferida');
+            alert('Selecione a temperatura aferida');
           } else {
             setTempo('MENOS DE 3 DIAS');
             nextPage();
@@ -59,7 +59,7 @@ const Tela4_1_2 = () => {
         onClick={(e) => {
           e.preventDefault();
           if (temperaturaAferida == null) {
-            alert('Selecione uma temperatura aferida');
+            alert('Selecione a temperatura aferida');
           } else {
             setTempo('MAIS DE 3 DIAS');
             nextPage();

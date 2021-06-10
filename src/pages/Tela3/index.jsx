@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { Button } from '../../components/Button';
+import { GoBack } from '../../components/GoBack';
 import { Heading } from '../../components/Heading';
 import { Redirect } from '../../components/Redirect';
 import { BoxBottom } from '../../styles/global-styles';
@@ -9,9 +10,8 @@ const Tela3 = () => {
 
   return (
     <div>
-      <Heading marginTop={'40px'} paddingBottom={'20px'}>
-        CONTE NOS O SEU PRINCIPAL SINTOMA:
-      </Heading>
+      <GoBack />
+      <Heading>CONTE NOS O SEU PRINCIPAL SINTOMA:</Heading>
 
       <BoxBottom>
         <Button
@@ -37,6 +37,9 @@ FEBRE E/OU NÁUSEA
             history.push('/page-4-2');
           }}
         />
+      </BoxBottom>
+
+      <BoxBottom>
         <Button
           text="DOR"
           onClick={(e) => {
@@ -44,9 +47,7 @@ FEBRE E/OU NÁUSEA
             history.push('/page-4-3');
           }}
         />
-      </BoxBottom>
 
-      <BoxBottom>
         <Button
           text="FEBRE"
           onClick={(e) => {
@@ -54,7 +55,9 @@ FEBRE E/OU NÁUSEA
             history.push('/page-4-4');
           }}
         />
+      </BoxBottom>
 
+      <BoxBottom>
         <Button
           text="TOSSE"
           onClick={(e) => {
@@ -72,7 +75,6 @@ CONGESTÃO NASAL
           }}
         />
       </BoxBottom>
-
       <BoxBottom>
         <Button
           text="NÁUSEA"
@@ -88,6 +90,9 @@ CONGESTÃO NASAL
             history.push('/page-4-8');
           }}
         />
+      </BoxBottom>
+
+      <BoxBottom>
         <Button
           text="PRISÃO DE VENTRE"
           onClick={(e) => {
@@ -95,9 +100,7 @@ CONGESTÃO NASAL
             history.push('/page-4-9');
           }}
         />
-      </BoxBottom>
 
-      <BoxBottom>
         <Button
           text="AZIA
 MÁ DIGESTÃO
@@ -107,6 +110,9 @@ GASES"
             history.push('/page-4-10');
           }}
         />
+      </BoxBottom>
+
+      <BoxBottom>
         <Button
           text="CANSAÇO FÍSICO
 DES NIMO

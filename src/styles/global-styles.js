@@ -48,7 +48,7 @@ export const Container = styled.div`
     height: 100%;
     min-height: 100%;
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     padding-bottom: 80px;
@@ -89,7 +89,7 @@ export const ContentImagem = styled.div`
     justify-content: center;
     z-index: 999;
     position: relative;
-    width: 410px;
+    width: 390px;
     flex-direction: column;
   `}
 `;

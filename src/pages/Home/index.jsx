@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { Button } from '../../components/Button';
+import { GoBack } from '../../components/GoBack';
 import { Heading } from '../../components/Heading';
 import { BoxBottom } from '../../styles/global-styles';
 

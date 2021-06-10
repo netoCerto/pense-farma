@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { Button } from '../../components/Button';
+import { GoBack } from '../../components/GoBack';
 import { Heading } from '../../components/Heading';
 import { Redirect } from '../../components/Redirect';
 import { BoxBottom } from '../../styles/global-styles';
@@ -9,6 +10,7 @@ const Tela4_3 = () => {
 
   return (
     <div>
+      <GoBack />
       <Heading>CONTE-NOS ONDE ESTA LOCALIZADA A SUA DOR?</Heading>
 
       <BoxBottom>

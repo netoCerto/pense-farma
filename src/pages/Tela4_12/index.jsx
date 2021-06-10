@@ -5,6 +5,7 @@ import { Heading } from '../../components/Heading';
 import { BoxBottom, Imagem, ContentImagem } from '../../styles/global-styles';
 import Seta from '../../assets/images/arrow-down.svg';
 import { Redirect } from '../../components/Redirect';
+import { GoBack } from '../../components/GoBack';
 
 const Tela4_12 = () => {
   const history = useHistory();
@@ -36,24 +37,25 @@ const Tela4_12 = () => {
 
   return (
     <div>
+      <GoBack />
       <Heading>POR FAVOR, NOS DÊ MAIS DETALHES SOBRE A IRRITAÇÃO</Heading>
 
       <BoxBottom>
         <Heading
           size={'medium'}
           as={'h2'}
-          marginTop={'-30px'}
-          paddingBottom={'20px'}
-          width={'350px;'}
+          // marginTop={'-30px'}
+          // paddingBottom={'20px'}
+          width={'390px;'}
         >
           QUAL O ASPECTO DO OLHO IRRITADO?
         </Heading>
         <Heading
           size={'medium'}
           as={'h2'}
-          marginTop={'-30px'}
-          paddingBottom={'20px'}
-          width={'350px;'}
+          // marginTop={'-30px'}
+          // paddingBottom={'20px'}
+          width={'390px;'}
         >
           POR QUANTO TEMPO?
         </Heading>
@@ -74,6 +76,7 @@ const Tela4_12 = () => {
             e.preventDefault();
             setAspectOlho('COM VERMELHIDÃO');
           }}
+          customWidth={'370px'}
           opacity={aspectOlho == 'COM VERMELHIDÃO' ? '1' : '0.5'}
         />
 
@@ -82,11 +85,12 @@ const Tela4_12 = () => {
           onClick={(e) => {
             e.preventDefault();
             if (aspectOlho == null) {
-              alert('Selecione uma temperatura aferida');
+              alert('Selecione o aspecto do olho irritado');
             } else {
               nextPage('MENOS DE 3 DIAS');
             }
           }}
+          customWidth={'370px'}
           opacity={tempo == 'MENOS DE 3 DIAS' ? '1' : '0.5'}
         />
       </BoxBottom>
@@ -98,6 +102,7 @@ const Tela4_12 = () => {
             e.preventDefault();
             setAspectOlho('SEM VERMELHIDÃO');
           }}
+          customWidth={'370px'}
           opacity={aspectOlho == 'SEM VERMELHIDÃO' ? '1' : '0.5'}
         />
 
@@ -106,11 +111,12 @@ const Tela4_12 = () => {
           onClick={(e) => {
             e.preventDefault();
             if (aspectOlho == null) {
-              alert('Selecione uma temperatura aferida');
+              alert('Selecione o aspecto do olho irritado');
             } else {
               nextPage('MAIS DE 3 DIAS');
             }
           }}
+          customWidth={'370px'}
           opacity={tempo == 'MAIS DE 3 DIAS' ? '1' : '0.5'}
         />
       </BoxBottom>

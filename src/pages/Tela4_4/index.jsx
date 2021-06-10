@@ -5,6 +5,7 @@ import { Heading } from '../../components/Heading';
 import { BoxBottom, Imagem, ContentImagem } from '../../styles/global-styles';
 import Seta from '../../assets/images/arrow-down.svg';
 import { Redirect } from '../../components/Redirect';
+import { GoBack } from '../../components/GoBack';
 
 const Tela4_4 = () => {
   const history = useHistory();
@@ -36,24 +37,25 @@ const Tela4_4 = () => {
 
   return (
     <div>
+      <GoBack />
       <Heading>EXPLIQUE UM POUCO MELHOR SOBRE A SUA FEBRE</Heading>
 
       <BoxBottom>
         <Heading
           size={'medium'}
           as={'h2'}
-          marginTop={'-30px'}
-          paddingBottom={'20px'}
-          width={'410px'}
+          // marginTop={'-30px'}
+          // paddingBottom={'20px'}
+          width={'390px'}
         >
           QUAL A TEMPERATURA AFERIDA?
         </Heading>
         <Heading
           size={'medium'}
           as={'h2'}
-          marginTop={'-30px'}
-          paddingBottom={'20px'}
-          width={'410px'}
+          // marginTop={'-30px'}
+          // paddingBottom={'20px'}
+          width={'390px'}
         >
           POR QUANTO TEMPO?
         </Heading>
@@ -74,6 +76,7 @@ const Tela4_4 = () => {
             e.preventDefault();
             setTemperaturaAferida('ATÉ 38 °C');
           }}
+          customWidth={'370px'}
           opacity={temperaturaAferida == 'ATÉ 38 °C' ? '1' : '0.5'}
         />
 
@@ -82,11 +85,12 @@ const Tela4_4 = () => {
           onClick={(e) => {
             e.preventDefault();
             if (temperaturaAferida == null) {
-              alert('Selecione uma temperatura aferida');
+              alert('Selecione a temperatura aferida');
             } else {
               nextPage('MENOS DE 3 DIAS');
             }
           }}
+          customWidth={'370px'}
           opacity={tempo == 'MENOS DE 3 DIAS' ? '1' : '0.5'}
         />
       </BoxBottom>
@@ -98,6 +102,7 @@ const Tela4_4 = () => {
             e.preventDefault();
             setTemperaturaAferida('ACIMA DE 38 °C');
           }}
+          customWidth={'370px'}
           opacity={temperaturaAferida == 'ACIMA DE 38 °C' ? '1' : '0.5'}
         />
 
@@ -106,11 +111,12 @@ const Tela4_4 = () => {
           onClick={(e) => {
             e.preventDefault();
             if (temperaturaAferida == null) {
-              alert('Selecione uma temperatura aferida');
+              alert('Selecione a temperatura aferida');
             } else {
               nextPage('MAIS DE 3 DIAS');
             }
           }}
+          customWidth={'370px'}
           opacity={tempo == 'MAIS DE 3 DIAS' ? '1' : '0.5'}
         />
       </BoxBottom>

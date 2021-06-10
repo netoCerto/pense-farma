@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { Button } from '../../components/Button';
+import { GoBack } from '../../components/GoBack';
 import { Heading } from '../../components/Heading';
 import { Redirect } from '../../components/Redirect';
 import { BoxBottom } from '../../styles/global-styles';
@@ -8,6 +9,7 @@ const Tela4_1_3 = () => {
   const history = useHistory();
   return (
     <div>
+      <GoBack />
       <Heading>VOCÊ ESTA COM TOSSE CONSTANTE?</Heading>
       <BoxBottom>
         <Button

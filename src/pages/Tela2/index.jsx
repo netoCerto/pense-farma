@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { Button } from '../../components/Button';
+import { GoBack } from '../../components/GoBack';
 import { Heading } from '../../components/Heading';
 import { Redirect } from '../../components/Redirect';
 import { BoxBottom } from '../../styles/global-styles';
@@ -24,6 +25,7 @@ const Tela2 = () => {
 
   return (
     <div>
+      <GoBack />
       <Heading>
         VOCÊ TEM ALGUMA DOENÇA CRÕNICA, COMO DIABETES, HIPERTENSÃO, ASMA,
         CARDIOPATIA OU OUTRAS?

@@ -5,6 +5,7 @@ import { Heading } from '../../components/Heading';
 import { BoxBottom, Imagem, ContentImagem } from '../../styles/global-styles';
 import Seta from '../../assets/images/arrow-down.svg';
 import { Redirect } from '../../components/Redirect';
+import { GoBack } from '../../components/GoBack';
 
 const Tela4_2_1 = () => {
   const history = useHistory();
@@ -35,6 +36,7 @@ const Tela4_2_1 = () => {
 
   return (
     <div>
+      <GoBack />
       <Heading>TEVE FEBRE?</Heading>
       <BoxBottom>
         <Button
@@ -57,49 +59,31 @@ const Tela4_2_1 = () => {
       <Heading as={'h2'} marginTop={'20px'} paddingBottom={'20px'}>
         SE SIM:
       </Heading>
-      {/* <BoxBottom>
+      <BoxBottom>
         <Heading
           size={'medium'}
           as={'h2'}
-          marginTop={'-30px'}
-          paddingBottom={'20px'}
-          width={'350px;'}
+          // marginTop={'-30px'}
+          // paddingBottom={'20px'}
+          width={'390px;'}
         >
           QUAL A TEMPERATURA AFERIDA?
         </Heading>
         <Heading
           size={'medium'}
           as={'h2'}
-          marginTop={'-30px'}
-          paddingBottom={'20px'}
-          width={'350px;'}
+          // marginTop={'-30px'}
+          // paddingBottom={'20px'}
+          width={'390px;'}
         >
           POR QUANTO TEMPO?
         </Heading>
-      </BoxBottom> */}
+      </BoxBottom>
       <BoxBottom>
         <ContentImagem>
-          <Heading
-            size={'medium'}
-            as={'h2'}
-            // marginTop={'-30px'}
-            paddingBottom={'20px'}
-            // width={'350px;'}
-          >
-            QUAL A TEMPERATURA AFERIDA?
-          </Heading>
           <Imagem src={Seta} />
         </ContentImagem>
         <ContentImagem>
-          <Heading
-            size={'medium'}
-            as={'h2'}
-            // marginTop={'-30px'}
-            paddingBottom={'20px'}
-            // width={'350px;'}
-          >
-            POR QUANTO TEMPO?
-          </Heading>
           <Imagem src={Seta} />
         </ContentImagem>
       </BoxBottom>
@@ -111,6 +95,7 @@ const Tela4_2_1 = () => {
             e.preventDefault();
             setTemperaturaAferida('ATÉ 38 °C');
           }}
+          customWidth={'370px'}
           opacity={temperaturaAferida == 'ATÉ 38 °C' ? '1' : '0.5'}
         />
 
@@ -119,11 +104,12 @@ const Tela4_2_1 = () => {
           onClick={(e) => {
             e.preventDefault();
             if (temperaturaAferida == null) {
-              alert('Selecione uma temperatura aferida');
+              alert('Selecione a temperatura aferida');
             } else {
               nextPage('MENOS DE 3 DIAS');
             }
           }}
+          customWidth={'370px'}
           opacity={tempo == 'MENOS DE 3 DIAS' ? '1' : '0.5'}
         />
       </BoxBottom>
@@ -135,6 +121,7 @@ const Tela4_2_1 = () => {
             e.preventDefault();
             setTemperaturaAferida('ACIMA DE 38 °C');
           }}
+          customWidth={'370px'}
           opacity={temperaturaAferida == 'ACIMA DE 38 °C' ? '1' : '0.5'}
         />
 
@@ -143,11 +130,12 @@ const Tela4_2_1 = () => {
           onClick={(e) => {
             e.preventDefault();
             if (temperaturaAferida == null) {
-              alert('Selecione uma temperatura aferida');
+              alert('Selecione a temperatura aferida');
             } else {
               nextPage('MAIS DE 3 DIAS');
             }
           }}
+          customWidth={'370px'}
           opacity={tempo == 'MAIS DE 3 DIAS' ? '1' : '0.5'}
         />
       </BoxBottom>

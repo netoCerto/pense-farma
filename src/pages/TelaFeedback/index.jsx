@@ -8,6 +8,7 @@ import { BoxBottom } from '../../styles/global-styles';
 import { DivOne, DivTwo, Global } from './styles';
 
 const TelaFeedback = () => {
+  const history = useHistory();
   const location = useLocation();
 
   const layoutFarmaceutico = () => {
@@ -35,6 +36,15 @@ const TelaFeedback = () => {
         </DivOne>
         <DivTwo>
           <Heading a={'h2'}>SETOR: {location.state.setor}</Heading>
+          <BoxBottom>
+            <Button
+              text="VOLTAR PARA O INICIO"
+              onClick={(e) => {
+                e.preventDefault();
+                history.push('/');
+              }}
+            />
+          </BoxBottom>
         </DivTwo>
       </Global>
     );

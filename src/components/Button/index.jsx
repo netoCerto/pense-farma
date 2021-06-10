@@ -7,6 +7,7 @@ export const Button = ({
   around = false,
   cutomPadding = '20px 30px',
   size = '16px',
+  customWidth = '350px',
   opacity = '1',
 }) => {
   return (
@@ -16,6 +17,7 @@ export const Button = ({
         onClick={onClick}
         cutomPadding={cutomPadding}
         size={size}
+        customWidth={customWidth}
       >
         {text}
       </Styled.ButtonText>
@@ -28,6 +30,7 @@ Button.propTypes = {
   onClick: P.func.isRequired,
   around: P.bool,
   cutomPadding: P.string,
+  customWidth: P.string,
   size: P.string,
   opacity: P.string,
 };

@@ -10,18 +10,18 @@ export const ButtonContainer = styled.div`
     border: 5px solid #e8e8e8;
     border-radius: 20px;
     clear: both;
-    margin-right: 30px;
+    margin: 0 15px;
     opacity: ${opacity};
     background-image: linear-gradient(to right, #fefefe, #d6d6d6);
   `}
 `;
 
 export const ButtonText = styled.a`
-  ${({ theme, colorDark, cutomPadding, size }) => css`
+  ${({ theme, colorDark, cutomPadding, size, customWidth }) => css`
     display: flex;
     color: ${theme.colors.red};
     font-weight: 900;
-    width: 350px;
+    width: ${customWidth};
     height: 100px;
     align-items: center;
     justify-content: center;
