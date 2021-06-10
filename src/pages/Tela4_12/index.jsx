@@ -81,7 +81,7 @@ const Tela4_12 = () => {
           text="MENOS DE 3 DIAS"
           onClick={(e) => {
             e.preventDefault();
-            if (tempo == null) {
+            if (aspectOlho == null) {
               alert('Selecione uma temperatura aferida');
             } else {
               nextPage('MENOS DE 3 DIAS');
@@ -105,7 +105,7 @@ const Tela4_12 = () => {
           text="MAIS DE 3 DIAS"
           onClick={(e) => {
             e.preventDefault();
-            if (tempo == null) {
+            if (aspectOlho == null) {
               alert('Selecione uma temperatura aferida');
             } else {
               nextPage('MAIS DE 3 DIAS');

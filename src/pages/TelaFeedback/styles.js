@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const Global = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   height: 100%;
 `;
 
@@ -13,5 +13,5 @@ export const DivOne = styled.div`
 
 export const DivTwo = styled.div`
   /* display: flex; */
-  margin-bottom: 60px;
+  margin: 70px 0px 0px;
 `;
