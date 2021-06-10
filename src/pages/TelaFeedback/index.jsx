@@ -23,6 +23,15 @@ const TelaFeedback = () => {
         </DivOne>
         <DivTwo>
           <Heading a={'h2'}>POSSO AJUDAR</Heading>
+          <BoxBottom>
+            <Button
+              text="VOLTAR PARA O INICIO"
+              onClick={(e) => {
+                e.preventDefault();
+                history.push('/');
+              }}
+            />
+          </BoxBottom>
         </DivTwo>
       </Global>
     );
