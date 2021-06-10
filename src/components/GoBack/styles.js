@@ -16,6 +16,6 @@ export const ButtonText = styled.a`
 
 export const Image = styled.img`
   ${() => css`
-    width: 70px;
+    width: 34px;
   `}
 `;
