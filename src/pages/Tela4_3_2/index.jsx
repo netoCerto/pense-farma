@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useAlert } from 'react-alert';
 import { Button } from '../../components/Button';
 import { Heading } from '../../components/Heading';
 import { BoxBottom, Imagem, ContentImagem } from '../../styles/global-styles';
@@ -9,6 +10,7 @@ import { GoBack } from '../../components/GoBack';
 
 const Tela4_3_2 = () => {
   const history = useHistory();
+  const alert = useAlert();
   const [temperaturaAferida, setTemperaturaAferida] = useState(null);
   const [tempo, setTempo] = useState(null);
 
@@ -107,7 +109,7 @@ const Tela4_3_2 = () => {
           onClick={(e) => {
             e.preventDefault();
             if (temperaturaAferida == null) {
-              alert('Selecione a temperatura aferida');
+              alert.show('Selecione a temperatura aferida');
             } else {
               nextPage('MENOS DE 3 DIAS');
             }
@@ -133,7 +135,7 @@ const Tela4_3_2 = () => {
           onClick={(e) => {
             e.preventDefault();
             if (temperaturaAferida == null) {
-              alert('Selecione a temperatura aferida');
+              alert.show('Selecione a temperatura aferida');
             } else {
               nextPage('MAIS DE 3 DIAS');
             }

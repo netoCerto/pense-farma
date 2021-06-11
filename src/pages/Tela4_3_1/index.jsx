@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
+import { useAlert } from 'react-alert';
 import { Button } from '../../components/Button';
 import { Heading } from '../../components/Heading';
 import { BoxBottom, Imagem, ContentImagem } from '../../styles/global-styles';
@@ -9,6 +10,7 @@ import { GoBack } from '../../components/GoBack';
 
 const Tela4_3_1 = () => {
   const history = useHistory();
+  const alert = useAlert();
   const location = useLocation();
   const [tempo, setTempo] = useState(null);
   const [medicamento, setMendicamento] = useState(null);
@@ -181,7 +183,7 @@ const Tela4_3_1 = () => {
           onClick={(e) => {
             e.preventDefault();
             if (tempo == null) {
-              alert('Selecione o tempo');
+              alert.show('Selecione o tempo');
             } else {
               nextPage('SIM');
             }
@@ -207,7 +209,7 @@ const Tela4_3_1 = () => {
           onClick={(e) => {
             e.preventDefault();
             if (medicamento == null) {
-              alert('Selecione o tempo');
+              alert.show('Selecione o tempo');
             } else {
               nextPage('NÃO');
             }
